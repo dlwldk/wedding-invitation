@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>김민수 ♥ 이지은 결혼합니다</title>
+<meta property="og:title" content="김민수 ♥ 이지은 결혼합니다">
+<meta property="og:description" content="2026년 12월 5일 토요일 오후 2시">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    background: #f6f1ea;
+    color: #3b3b3b;
+    line-height: 1.8;
+  }
+  .wrap { max-width: 480px; margin: 0 auto; background: #fffdf9; min-height: 100vh; }
+  section { padding: 56px 28px; text-align: center; border-bottom: 1px solid #eee5d8; }
+  .hero { padding-top: 80px; padding-bottom: 80px; }
+  .small { font-size: 13px; letter-spacing: 3px; color: #a08a6a; margin-bottom: 20px; }
+  h1 { font-size: 28px; font-weight: 600; margin-bottom: 20px; }
+  .date { font-size: 15px; color: #666; }
+  h2 { font-size: 18px; margin-bottom: 20px; color: #a08a6a; font-weight: 600; }
+  p { font-size: 15px; color: #555; }
+  .btn {
+    display: inline-block; margin-top: 16px; padding: 12px 24px;
+    background: #a08a6a; color: #fff; border-radius: 999px;
+    text-decoration: none; font-size: 14px; border: none; cursor: pointer;
+  }
+  .account { background: #f6f1ea; border-radius: 12px; padding: 16px; margin-top: 12px; font-size: 14px; }
+  #msg { margin-top: 12px; font-size: 13px; color: #a08a6a; min-height: 20px; }
+  footer { padding: 32px; text-align: center; font-size: 12px; color: #aaa; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section class="hero">
+    <div class="small">WEDDING INVITATION</div>
+    <h1>김민수 &amp; 이지은</h1>
+    <div class="date">2026년 12월 5일 토요일 오후 2시</div>
+    <div class="date">서울 OO웨딩홀 3층</div>
+  </section>
+
+  <section>
+    <h2>초대합니다</h2>
+    <p>
+      서로 다른 길을 걸어온 두 사람이<br>
+      이제 같은 길을 함께 걸어가려 합니다.<br>
+      귀한 걸음으로 축복해 주시면<br>
+      큰 기쁨이 되겠습니다.
+    </p>
+  </section>
+
+  <section>
+    <h2>D-DAY</h2>
+    <p id="dday" style="font-size:22px; font-weight:600; color:#3b3b3b;"></p>
+  </section>
+
+  <section>
+    <h2>오시는 길</h2>
+    <p>서울특별시 OO구 OO로 123<br>OO웨딩홀 3층 그랜드홀</p>
+    <a class="btn" href="https://map.naver.com" target="_blank">네이버 지도 열기</a>
+  </section>
+
+  <section>
+    <h2>마음 전하실 곳</h2>
+    <div class="account">신랑 김민수<br>OO은행 123-456-789012</div>
+    <button class="btn" onclick="copyAcc()">계좌번호 복사</button>
+    <div id="msg"></div>
+  </section>
+
+  <footer>테스트용 샘플 페이지입니다</footer>
+</div>
+
+<script>
+  // D-DAY 계산
+  const target = new Date("2026-12-05T14:00:00+09:00");
+  const diff = Math.ceil((target - new Date()) / 86400000);
+  document.getElementById("dday").textContent =
+    diff > 0 ? "결혼식까지 D-" + diff : diff === 0 ? "오늘 결혼합니다!" : "결혼식이 지났어요";
+
+  // 계좌 복사
+  function copyAcc() {
+    const text = "OO은행 123-456-789012";
+    const done = () => document.getElementById("msg").textContent = "복사되었어요 ✓";
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(done);
+    } else {
+      done();
+    }
+  }
+</script>
+</body>
+</html>
