@@ -943,9 +943,7 @@
               "2027년 2월 21일 일요일 오전 11시\n브라이드 밸리 B1층";
             var shareImageUrl = window.location.origin + "/images/main.jpg";
             var kakaoMapAnchor = document.getElementById("kakao-map-link");
-            var kakaoMapViewUrl = kakaoMapAnchor
-              ? kakaoMapAnchor.href
-              : "https://map.kakao.com/link/search/" + encodeURIComponent(venueAddress);
+            var kakaoMapViewUrl = "https://map.kakao.com/link/search/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C%20262%20%EC%BA%A0%EC%BD%94%EC%96%91%EC%9E%AC%ED%83%80%EC%9B%8C%20B1%EC%B8%B5";
             var kakaoStoryUrl = "https://story.kakao.com/share?url=" + encodeURIComponent(shareUrl);
             var kakaoJsKeyMeta = document.querySelector('meta[name="kakao-js-key"]');
             var kakaoJsKey = kakaoJsKeyMeta ? kakaoJsKeyMeta.getAttribute("content").trim() : "";
