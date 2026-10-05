@@ -4,19 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <title>태인 ♥ 지아 결혼합니다.</title>
-    <meta
-      name="description"
-      content="2027년 2월 21일 일요일 오전 11시 00분, 서울특별시 강남구 강남대로 262 캠코양재타워 B1층"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="온태인 ♥ 이지아 결혼합니다." />
-    <meta
-      property="og:description"
-      content="2027년 2월 21일 일요일 오전 11시, 브라이드 밸리 B1층에서 소중한 분들을 초대합니다."
-    />
-    <meta property="og:image" content="./images/main.jpg" />
-    <meta property="og:image:alt" content="웨딩 메인 사진" />
-    <meta property="og:url" content="" />
     <meta name="kakao-js-key" content="650cad7d46c4cc5d21c26eaa5326273d" />
     <link rel="preload" as="image" href="./images/main.jpg" />
     <link rel="stylesheet" href="./styles.css" />
@@ -949,13 +936,15 @@
         }
         if (shareFab) {
           shareFab.addEventListener("click", async function () {
-            var shareUrl = window.location.href;
+            var shareUrl = "https://wedding-invitation.dlwldk1030.workers.dev";
             var shareTitle = "온태인 ♥ 이지아 결혼합니다.";
             var shareDescription =
-              "2027년 2월 21일 일요일 오전 11시\n서울특별시 강남구 강남대로 262 캠코양재타워 B1층";
+              "2027년 2월 21일 일요일 오전 11시\n브라이드 밸리 B1층";
             var shareImageUrl = window.location.origin + "/images/main.jpg";
-            var kakaoMapViewUrl =
-              "https://map.kakao.com/link/search/" + encodeURIComponent(venueAddress);
+            var kakaoMapAnchor = document.querySelector('.map-links a[href*="map.kakao.com"]');
+            var kakaoMapViewUrl = kakaoMapAnchor
+              ? kakaoMapAnchor.href
+              : "https://map.kakao.com/link/search/" + encodeURIComponent(venueAddress);
             var kakaoStoryUrl = "https://story.kakao.com/share?url=" + encodeURIComponent(shareUrl);
             var kakaoJsKeyMeta = document.querySelector('meta[name="kakao-js-key"]');
             var kakaoJsKey = kakaoJsKeyMeta ? kakaoJsKeyMeta.getAttribute("content").trim() : "";
