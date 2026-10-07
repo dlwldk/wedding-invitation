@@ -3,7 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <title>태인 ♥ 지아 결혼합니다.</title>
+    <title>온태인 ♥ 이지아 결혼합니다.</title>
+    <meta
+      name="description"
+      content="2027년 2월 21일 일요일 오전 11시 · 서울특별시 강남구 강남대로 262 캠코양재타워 B1층"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="온태인 ♥ 이지아 결혼합니다." />
+    <meta
+      property="og:description"
+      content="2027년 2월 21일 일요일 오전 11시&#10;브라이드 밸리 B1층"
+    />
+    <meta property="og:image" content="./images/main.jpg" />
+    <meta property="og:image:alt" content="온태인 이지아 웨딩 메인 사진" />
+    <meta property="og:url" content="https://wedding-invitation.dlwldk1030.workers.dev/" />
     <meta name="kakao-js-key" content="650cad7d46c4cc5d21c26eaa5326273d" />
     <link rel="preload" as="image" href="./images/main.jpg" />
     <link rel="stylesheet" href="./styles.css" />
@@ -219,23 +232,21 @@
             <article class="account-item">
               <div class="account-text">
                 <h4>신랑 아버지</h4>
-                <p>2222-2222-2222-2222</p>
-                <p>카카오뱅크 온낙현</p>
+                <p>525010-56-024409</p>
+                <p>농협은행 온낙현</p>
               </div>
-              <div class="account-actions">
+              <div class="account-actions copy-only">
                 <button type="button" class="copy-btn" data-copy="2222-2222-2222-2222">복사</button>
-                <a href="#" class="pay-btn" aria-label="신랑 아버지 카카오페이"><img src="./icons/kakaopay.svg" alt="카카오페이" /></a>
               </div>
             </article>
             <article class="account-item">
               <div class="account-text">
                 <h4>신랑 어머니</h4>
-                <p>3333-3333-3333-3333</p>
-                <p>카카오뱅크 온어머니</p>
+                <p>525013-52-001299</p>
+                <p>농협은행 박희자</p>
               </div>
-              <div class="account-actions">
+              <div class="account-actions copy-only">
                 <button type="button" class="copy-btn" data-copy="3333-3333-3333-3333">복사</button>
-                <a href="#" class="pay-btn" aria-label="신랑 어머니 카카오페이"><img src="./icons/kakaopay.svg" alt="카카오페이" /></a>
               </div>
             </article>
           </div>
@@ -943,7 +954,9 @@
               "2027년 2월 21일 일요일 오전 11시\n브라이드 밸리 B1층";
             var shareImageUrl = window.location.origin + "/images/main.jpg";
             var kakaoMapAnchor = document.getElementById("kakao-map-link");
-            var kakaoMapViewUrl = "https://map.kakao.com/link/search/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C%20262%20%EC%BA%A0%EC%BD%94%EC%96%91%EC%9E%AC%ED%83%80%EC%9B%8C%20B1%EC%B8%B5";
+            var kakaoMapViewUrl = kakaoMapAnchor
+              ? kakaoMapAnchor.getAttribute("href")
+              : "https://map.kakao.com/link/search/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C%20262%20%EC%BA%A0%EC%BD%94%EC%96%91%EC%9E%AC%ED%83%80%EC%9B%8C%20B1%EC%B8%B5";
             var kakaoStoryUrl = "https://story.kakao.com/share?url=" + encodeURIComponent(shareUrl);
             var kakaoJsKeyMeta = document.querySelector('meta[name="kakao-js-key"]');
             var kakaoJsKey = kakaoJsKeyMeta ? kakaoJsKeyMeta.getAttribute("content").trim() : "";

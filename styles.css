@@ -1222,6 +1222,11 @@ body.contact-modal-open {
   align-items: flex-end;
 }
 
+.account-actions.copy-only {
+  justify-content: center;
+  align-items: center;
+}
+
 .copy-btn,
 .pay-btn {
   min-width: 82px;
