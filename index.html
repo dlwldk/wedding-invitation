@@ -32,7 +32,9 @@
             alt="메인 사진"
             loading="eager"
             fetchpriority="high"
-            decoding="sync"
+            decoding="async"
+            width="1080"
+            height="1606"
           />
           <div class="hero-frame" aria-hidden="true"></div>
           <div class="hero-title-overlay" aria-hidden="true">
@@ -136,15 +138,15 @@
           </button>
           <div class="gallery-viewport">
             <div class="gallery-track" data-gallery-track>
-              <img class="gallery-slide-image" src="./images/sub1.jpg" alt="사진 1" />
-              <img class="gallery-slide-image" src="./images/sub2.jpg" alt="사진 2" />
-              <img class="gallery-slide-image" src="./images/sub3.jpg" alt="사진 3" />
-              <img class="gallery-slide-image" src="./images/sub4.jpg" alt="사진 4" />
-              <img class="gallery-slide-image" src="./images/sub5.jpg" alt="사진 5" />
-              <img class="gallery-slide-image" src="./images/sub6.jpg" alt="사진 6" />
-              <img class="gallery-slide-image" src="./images/sub7.jpg" alt="사진 7" />
-              <img class="gallery-slide-image" src="./images/sub8.jpg" alt="사진 8" />
-              <img class="gallery-slide-image" src="./images/sub9.jpg" alt="사진 9" />
+              <img class="gallery-slide-image" src="./images/sub1.jpg" alt="사진 1" loading="lazy" decoding="async" />
+              <img class="gallery-slide-image" src="./images/sub2.jpg" alt="사진 2" loading="lazy" decoding="async" />
+              <img class="gallery-slide-image" src="./images/sub3.jpg" alt="사진 3" loading="lazy" decoding="async" />
+              <img class="gallery-slide-image" src="./images/sub4.jpg" alt="사진 4" loading="lazy" decoding="async" />
+              <img class="gallery-slide-image" src="./images/sub5.jpg" alt="사진 5" loading="lazy" decoding="async" />
+              <img class="gallery-slide-image" src="./images/sub6.jpg" alt="사진 6" loading="lazy" decoding="async" />
+              <img class="gallery-slide-image" src="./images/sub7.jpg" alt="사진 7" loading="lazy" decoding="async" />
+              <img class="gallery-slide-image" src="./images/sub8.jpg" alt="사진 8" loading="lazy" decoding="async" />
+              <img class="gallery-slide-image" src="./images/sub9.jpg" alt="사진 9" loading="lazy" decoding="async" />
             </div>
           </div>
           <button class="gallery-arrow right" type="button" data-gallery-next aria-label="다음 사진">
@@ -726,7 +728,7 @@
               indexLabel +
               '" src="' +
               src +
-              '" alt="웨딩 갤러리 사진 ' +
+              '" loading="lazy" decoding="async" alt="웨딩 갤러리 사진 ' +
               indexLabel +
               '" />'
             );
