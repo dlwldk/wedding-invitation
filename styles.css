@@ -924,6 +924,7 @@ body.contact-modal-open {
 
 .gallery-track {
   display: flex;
+  align-items: flex-start;
   width: 100%;
   transform: translateX(0);
   transition: transform 0.52s cubic-bezier(0.22, 1, 0.36, 1);
@@ -931,9 +932,13 @@ body.contact-modal-open {
 
 .gallery-slide-image {
   display: block;
+  width: 100%;
   min-width: 100%;
+  max-width: 100%;
   height: auto;
   flex: 0 0 100%;
+  object-fit: contain;
+  align-self: flex-start;
 }
 
 .gallery-arrow {
