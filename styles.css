@@ -595,7 +595,8 @@ body {
 }
 
 .hero-names .name {
-  font-size: 1.2rem;
+  font-size: 1.26rem;
+  font-weight: 700;
   letter-spacing: 5px;
 }
 
@@ -608,11 +609,16 @@ body {
 .hero-date-info {
   line-height: 1.5rem;
   padding-bottom: 1.3rem;
+  font-weight: 700;
 }
 
 .hero-date-info p {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+}
+
+.hero-date-info p:last-child {
+  font-size: 1.02rem;
 }
 
 .greeting {
@@ -1288,7 +1294,7 @@ body.contact-modal-open {
 .outro {
   padding: 0;
   border-bottom: 0;
-  background-image: url("./photo/main1.jpeg");
+  background-image: url("./images/main.jpg");
   background-size: cover;
   background-position: center;
 }
